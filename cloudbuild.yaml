@@ -1,0 +1,25 @@
+---
+steps:
+- name: hashicorp/terraform:${_TERRAFORM_VERSION}
+  id: tf-fmt
+  entrypoint: terraform
+  args:
+  - fmt
+  - -recursive
+  - -check
+- name: hashicorp/terraform:${_TERRAFORM_VERSION}
+  id: tf-init
+  entrypoint: terraform
+  args:
+    - init
+- name: hashicorp/terraform:${_TERRAFORM_VERSION}
+  id: tf-plan
+  entrypoint: terraform
+  args:
+    - plan
+options:
+  env:
+    - "TF_IN_AUTOMATION=1"
+
+substitutions:
+  _TERRAFORM_VERSION: "0.12.24"

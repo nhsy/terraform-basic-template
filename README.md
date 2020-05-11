@@ -41,10 +41,10 @@ The following files exist in the parent folder:
 
 # GCP Cloud Build CI
 In order to automate CI with Github.com follow the steps below:
-* Create a repo on Github.com
 * Enable the Google Cloud Build marketplace addon
+* Create a repo on Github.com and enable Google Cloud Build integration 
 * Launch GCP console and connect the Github repo to the GCP Project
-* Setup the Cloud Build trigger 
+* Setup the Cloud Build trigger for the repo
 
 ## Running Cloud Build locally
 * Install ``cloud-build-local``
